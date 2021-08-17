@@ -1,0 +1,7 @@
+<h1>ALL PETS FOUND 😆</h1>
+
+<% @pets.each do |pet| %>
+  <h2><%= link_to pet.name, pet_path(pet) %> - <%= pet.species %></h2>
+  <p><%= pet.address %></p>
+  <p>Found <%= time_ago_in_words(pet.found_on) %> ago</p>
+<% end %>
